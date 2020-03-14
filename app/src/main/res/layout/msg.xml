@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+
+        tools:context="com.messages.abdallah.mymessages.MessageActivity"
+        android:id="@+id/ll"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:weightSum="1"
+        >
+        <!--android:background="#e2e4fe"-->
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:hint="إبحث هنا"
+            android:gravity="center"
+            android:background="@drawable/rounded_border_edittext"
+            android:drawableRight="@android:drawable/ic_menu_search"/>
+
+
+        <ListView
+            android:id="@+id/lvMessages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:dividerHeight="10dp"
+            android:listSelector="@android:color/transparent" />
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

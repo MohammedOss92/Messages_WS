@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="تغيير اللون"
+        android:id="@+id/textView"
+        android:textSize="30sp"
+        android:gravity="right" />
+
+    <RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/text"
+    android:id="@+id/radio_group"
+    android:background="@android:color/white">
+
+
+        <RadioButton
+            android:id="@+id/light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawablePadding="10dp"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:text="فاتح"
+            android:textSize="20dp"
+            android:layout_alignParentLeft="true"/>
+
+        <RadioButton
+            android:id="@+id/dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawablePadding="10dp"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:text="غامق"
+            android:textSize="20dp"
+            android:layout_alignParentLeft="true"/>
+
+    </RadioGroup>
+
+</LinearLayout>

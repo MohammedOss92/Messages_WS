@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.message.abdallah.mymessages.PagerMessages">
+
+    <!--<item android:id="@+id/action_fav" android:title=""-->
+        <!---->
+        <!--android:orderInCategory="100" app:showAsAction="always" />-->
+
+    <item android:id="@+id/action_share" android:title="مشاركة"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+    <item android:id="@+id/action_copy" android:title="نسخ"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+    <item android:id="@+id/action_text_size" android:title="تغيير حجم الخط"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+    <!--<item android:id="@+id/action_background_color" android:title="تغيير اللون"-->
+        <!--android:orderInCategory="100" app:showAsAction="never" />-->
+
+
+    <item android:id="@+id/action_edit" android:title="تعديل النص"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+</menu>

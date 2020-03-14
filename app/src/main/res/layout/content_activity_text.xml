@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+    android:background="@drawable/back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="58dp">
+
+        <LinearLayout
+            android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/entertext" />
+
+            <EditText
+                android:id="@+id/intext"
+                android:background="#ffffff"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="9dp"
+                android:hint="ادخل النص هنا ..."
+                android:ems="10"
+                android:layout_centerHorizontal="true">
+                <requestFocus />
+            </EditText>
+            <ImageView
+                android:id="@+id/press"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/press" />
+
+            <LinearLayout
+                android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="9dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0">
+                    <ImageView
+                        android:id="@+id/copy1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:src="@drawable/copy"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0">
+
+
+
+
+
+                    <ImageView
+                        android:id="@+id/share1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:src="@drawable/share" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/out1"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="#ffffff"
+                    android:ems="10"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:lines="1"
+                    android:maxLines="5"
+                    android:cursorVisible="false"
+                    android:scrollbars="vertical"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="textMultiLine"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="9dp">
+
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0">
+
+                    <ImageView android:id="@+id/copy2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:layout_marginTop="3dp" android:src="@drawable/copy" /></LinearLayout>
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0">
+                    <ImageView android:id="@+id/share2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp" android:src="@drawable/share" />
+
+                </LinearLayout>
+                <EditText android:id="@+id/out2" android:background="#ffffff" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="140dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:ems="10"
+                    android:layout_centerHorizontal="true"
+                    android:lines="1"
+                    android:maxLines="5"
+                    android:cursorVisible="false"
+                    android:scrollbars="vertical"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="textMultiLine"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9dp"
+                android:layout_marginTop="10dp" android:layout_marginRight="9dp">
+
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:layout_weight="1.0">
+
+                    <ImageView android:id="@+id/copy3"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp" android:src="@drawable/copy" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:layout_weight="1.0">
+
+                    <ImageView android:id="@+id/share3" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp" android:src="@drawable/share" />
+                </LinearLayout>
+                <EditText android:id="@+id/out3" android:background="#ffffff" android:paddingLeft="8dp" android:paddingRight="8dp"
+                    android:layout_width="140dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp"
+                    android:ems="10"
+                    android:layout_centerHorizontal="true"
+                    android:lines="1"
+                    android:maxLines="5"
+                    android:cursorVisible="false"
+                    android:scrollbars="vertical"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="textMultiLine"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9dp" android:layout_marginTop="10dp" android:layout_marginRight="9dp">
+                <LinearLayout
+                    android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+                    <ImageView android:id="@+id/copy4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:src="@drawable/copy" /></LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+
+                    <ImageView android:id="@+id/share4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:src="@drawable/share" />
+                </LinearLayout>
+                <EditText android:id="@+id/out4" android:background="#ffffff" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="140dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:ems="10"
+                    android:layout_centerHorizontal="true"
+                    android:lines="1"
+                    android:maxLines="5"
+                    android:cursorVisible="false"
+                    android:scrollbars="vertical"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="textMultiLine"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9dp" android:layout_marginTop="10dp" android:layout_marginRight="9dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+                    <ImageView android:id="@+id/copy5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:src="@drawable/copy" /></LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+
+
+                    <ImageView android:id="@+id/share5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:src="@drawable/share" />
+                </LinearLayout>
+                <EditText android:id="@+id/out5" android:background="#ffffff" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="140dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:ems="10"
+                    android:layout_centerHorizontal="true"
+                    android:lines="1"
+                    android:maxLines="5"
+                    android:cursorVisible="false"
+                    android:scrollbars="vertical"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="textMultiLine"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9dp" android:layout_marginTop="10dp" android:layout_marginRight="9dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+                    <ImageView android:id="@+id/copy6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:src="@drawable/copy" /></LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+
+                    <ImageView android:id="@+id/share6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:src="@drawable/share" />
+                </LinearLayout>
+
+                <EditText android:id="@+id/out6" android:background="#ffffff" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="140dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:ems="10"
+                    android:layout_centerHorizontal="true"
+                    android:lines="1"
+                    android:maxLines="5"
+                    android:cursorVisible="false"
+                    android:scrollbars="vertical"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="textMultiLine"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9dp" android:layout_marginTop="10dp" android:layout_marginRight="9dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+                    <ImageView android:id="@+id/copy7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:src="@drawable/copy" /></LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+
+
+                    <ImageView android:id="@+id/share7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:src="@drawable/share" />
+                </LinearLayout>
+                <EditText android:id="@+id/out7" android:background="#ffffff" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="140dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:ems="10"
+                    android:layout_centerHorizontal="true"
+                    android:lines="1"
+                    android:maxLines="5"
+                    android:cursorVisible="false"
+                    android:scrollbars="vertical"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="textMultiLine"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9dp" android:layout_marginTop="10dp" android:layout_marginRight="9dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+                    <ImageView android:id="@+id/copy8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:src="@drawable/copy" /></LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+
+                    <ImageView android:id="@+id/share8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:src="@drawable/share" />
+                </LinearLayout>
+                <EditText android:id="@+id/out8" android:background="#ffffff" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="140dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:ems="10"
+                    android:layout_centerHorizontal="true"
+                    android:lines="1"
+                    android:maxLines="5"
+                    android:cursorVisible="false"
+                    android:scrollbars="vertical"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="textMultiLine"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9dp" android:layout_marginTop="10dp" android:layout_marginRight="9dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+                    <ImageView android:id="@+id/copy9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:src="@drawable/copy" /></LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+
+                    <ImageView android:id="@+id/share9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:src="@drawable/share" />
+                </LinearLayout>
+                <EditText android:id="@+id/out9" android:background="#ffffff" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="140dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:ems="10"
+                    android:layout_centerHorizontal="true"
+                    android:lines="1"
+                    android:maxLines="5"
+                    android:cursorVisible="false"
+                    android:scrollbars="vertical"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="textMultiLine"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!--<com.google.android.gms.android.AdView android:id="@+id/adView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:androidize="BANNER" android:adUnitId="ca-app-pub-5653393892523683/4141209015" />-->
+</RelativeLayout>

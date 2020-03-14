@@ -1,0 +1,33 @@
+<resources>
+    <string name="title_activity_main"></string>
+    <string name="title_activity_pager__messages"></string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="app_name">مسجاتي</string>
+    http://msgws.sarrawi.com/messagesws.asmx
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="titles_ws">http://abdallahoss-001-site1.htempurl.com/messagesws.asmx/readTitle</string>
+    <string name="messages_ws">http://abdallahoss-001-site1.htempurl.com/messagesws.asmx/readMessagesByTitle</string>
+
+    <string name="messages_filter_ws">http://msgws.sarrawi.com/messagesws.asmx/readMessagesByTitleAndFilter</string>
+    <string name="count_of_messages">http://msgws.sarrawi.com/messagesws.asmx/getCountOfMessagesByTitle</string>
+<!--    <string name="titles_ws">http://10.0.2.2/samfgfg/messagesws.asmx/readTitles</string>-->
+    <!--<string name="messages_ws">http://10.0.2.2/samfgfg/messagesws.asmx/readMessagesByTitle</string>-->
+    <!--<string name="messages_filter_ws">http://10.0.2.2/samfgfg/messagesws.asmx/readMessagesByTitleAndFilter</string>-->
+    <!--<string name="count_of_messages">http://10.0.2.2/samfgfg/messagesws.asmx/getCountOfMessagesByTitle</string>-->
+    <string name="banner_ad_unit_id">ca-app-pub-1895204889916566/8524415538</string>
+    <string name="ad_unit_id">ca-app-pub-1895204889916566/8384814738</string>
+
+    <string name="title_activity_message"></string>
+    <string name="title_activity_text_msg"></string>
+    <string name="title_activity_pager_messages"></string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_fav_message"></string>
+    <string name="title_activity_activity_text"></string>
+    <string name="title_activity_edit_text"></string>
+    <string name="vcvv">---</string>
+</resources>

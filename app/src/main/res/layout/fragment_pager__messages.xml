@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:id="@+id/rl"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity=""
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="67dp"
+        android:id="@+id/relativeLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="125dp"
+        android:layout_below="@+id/imgNew">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/tvMsg"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="44dp" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgNew"
+        android:src="@drawable/new_msg"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/relativeLayout"
+        android:layout_alignEnd="@+id/relativeLayout"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgFav"
+        android:src="@drawable/notfavorite"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/tvTitle"
+        android:layout_alignEnd="@+id/tvTitle"
+        android:layout_marginBottom="57dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/tvTitle"
+        android:layout_above="@+id/imgFav"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center" />
+
+
+</RelativeLayout>

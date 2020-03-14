@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.messages.abdallah.mymessages.FavMessageActivity"
+    android:focusable="true"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:id="@+id/editText"
+        android:hint="إبحث هنا"
+        android:gravity="center"
+        android:background="@drawable/rounded_border_edittext"
+        android:drawableRight="@android:drawable/ic_menu_search"/>
+
+
+
+
+
+    <ListView
+        android:id="@+id/lvMessages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="10dp"
+        android:layout_above="@+id/adView" />
+
+
+
+
+</RelativeLayout>
