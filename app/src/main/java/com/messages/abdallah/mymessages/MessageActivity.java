@@ -24,6 +24,8 @@ import android.widget.RadioGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.messages.abdallah.mymessages.Classes.Messages;
 import com.messages.abdallah.mymessages.SqliteClasses.Sqlite;
 import com.messages.abdallah.mymessages.adapters.MessagesAdapter;
@@ -48,7 +50,7 @@ public class MessageActivity extends AppCompatActivity {
 
         lvMessages=(ListView) findViewById(R.id.lvMessages);
         et=(EditText)findViewById(R.id.editText);
-
+        AdsView();
         Intent i=getIntent();
         clsWSMessages ws=new clsWSMessages(this);
         if (i.getExtras()!=null) {
@@ -221,6 +223,13 @@ public class MessageActivity extends AppCompatActivity {
 
 
         dialog.show();
+    }
+
+    private void AdsView() {
+        AdView mAdView;
+//        MobileAds.initialize(this, App_ID);
+        mAdView = (AdView) findViewById(R.id.adView_item_one);
+        mAdView.loadAd(new AdRequest.Builder().build());
     }
 
 

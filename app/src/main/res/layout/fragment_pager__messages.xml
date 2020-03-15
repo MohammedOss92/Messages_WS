@@ -4,7 +4,17 @@
 
     android:id="@+id/rl"
     xmlns:ads="http://schemas.android.com/apk/res-auto">
-
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView_frag"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-1895204889916566/6714337935"
+        tools:ignore="MissingConstraints"
+        />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -47,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imgFav"
-        android:src="@drawable/notfavorite"
+        android:src="@mipmap/nff"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/tvTitle"
         android:layout_alignEnd="@+id/tvTitle"

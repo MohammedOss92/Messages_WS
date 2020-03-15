@@ -10,6 +10,8 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -56,7 +58,7 @@ public class MessagesAdapter extends BaseAdapter {
 
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         final ViewHolder holder;
 
         if (inflater == null) {
@@ -89,6 +91,8 @@ public class MessagesAdapter extends BaseAdapter {
                         Toast.makeText(c, "WhatsApp not Installed", Toast.LENGTH_SHORT)
                                 .show();
                     }
+                    Animation animation = AnimationUtils.loadAnimation(c, R.anim.anim_rotate);
+                    holder.shared.startAnimation(animation);
                 }
             });
 
@@ -114,7 +118,8 @@ public class MessagesAdapter extends BaseAdapter {
                         }
                     });
                     //com.messages.abdallah.mymessages.Utils.IntenteShare(c, "مسجاتي", "مسجاتي", holder.tvMsg.getText().toString());
-
+                    Animation animation = AnimationUtils.loadAnimation(c, R.anim.anim_rotate);
+                    holder.share.startAnimation(animation);
                     popDialog.show();
                 }
             });
@@ -134,6 +139,8 @@ public class MessagesAdapter extends BaseAdapter {
                         clipboard.setPrimaryClip(clip);
                     }
                     Toast.makeText(c, "تم نسخ النص", Toast.LENGTH_SHORT).show();
+                    Animation animation = AnimationUtils.loadAnimation(c, R.anim.anim_rotate);
+                    holder.copy.startAnimation(animation);
                 }
             });
 
@@ -171,24 +178,27 @@ public class MessagesAdapter extends BaseAdapter {
 
 
                 if (s.getIFMsgIsFav(m) == 0) {
-                    holder.imgFav.setBackgroundResource(R.drawable.red);
+                    holder.imgFav.setBackgroundResource(R.mipmap.f);
                     s.changeFav(m, 1);
                     Toast.makeText(c, "تم الإضافة للمفضله", Toast.LENGTH_SHORT).show();
                 } else {
-                    holder.imgFav.setBackgroundResource(R.drawable.notfavorite);
+                    holder.imgFav.setBackgroundResource(R.mipmap.nf);
                     s.changeFav(m, 0);
                     Toast.makeText(c, "تم الإزالة من المفضله", Toast.LENGTH_SHORT).show();
-
+//                    myArrayList.remove(position);
                 }
+
+                Animation animation = AnimationUtils.loadAnimation(c, R.anim.anim_rotate);
+                holder.imgFav.startAnimation(animation);
             }
         });
 
 
         if (s.getIFMsgIsFav(m) == 0) {
-            holder.imgFav.setBackgroundResource(R.drawable.notfavorite);
+            holder.imgFav.setBackgroundResource(R.mipmap.nf);
 
         } else {
-            holder.imgFav.setBackgroundResource(R.drawable.red);
+            holder.imgFav.setBackgroundResource(R.mipmap.f);
 
         }
         return convertView;

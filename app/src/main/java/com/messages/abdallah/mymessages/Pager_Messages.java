@@ -34,6 +34,8 @@ import android.widget.Toast;
 import java.util.List;
 import java.util.Locale;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.messages.abdallah.mymessages.Classes.Messages;
 import com.messages.abdallah.mymessages.SqliteClasses.Sqlite;
 import com.messages.abdallah.mymessages.Utils.Utils;
@@ -61,6 +63,7 @@ public class Pager_Messages extends AppCompatActivity {
     String filter="";
     int msgId=0;
     int origPOS=0;
+    int oriPOS=0;
     int newMsg=0;
     boolean sourceISFav;
     @Override
@@ -75,6 +78,7 @@ public class Pager_Messages extends AppCompatActivity {
         // in case of fav the origPos sent from FavMessages as favOrder
         // but in case of normal message it sent as origpos
         origPOS=i.getExtras().getInt("origPos");
+        oriPOS=i.getExtras().getInt("origPos");
         newMsg=i.getExtras().getInt("newMsg");
         sourceISFav=i.getExtras().getBoolean("sourceIsFav");
 
@@ -121,43 +125,7 @@ public class Pager_Messages extends AppCompatActivity {
         });
 
 
-//////////////////////////////////
-
-
-
-
-
-        //   myArrayList=  ss.getMessages(titleID);
-        //   mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-        // mViewPager.setAdapter(mSectionsPagerAdapter);
-
     }
-
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_pager_messages, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//
-//            return true;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
-
-
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
@@ -301,23 +269,23 @@ public class Pager_Messages extends AppCompatActivity {
             final ImageView imgFav=(ImageView) rootView.findViewById(R.id.imgFav);
             if(s.getIFMsgIsFav(m)==1)
             {
-                imgFav.setBackgroundResource(R.drawable.thisfavorite);
+                imgFav.setBackgroundResource(R.mipmap.f);
             }
             else
             {
-                imgFav.setBackgroundResource(R.drawable.notfavorite);
+                imgFav.setBackgroundResource(R.mipmap.nf);
             }
 
             imgFav.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if(s.getIFMsgIsFav(m)==0) {
-                        imgFav.setBackgroundResource(R.drawable.thisfavorite);
+                        imgFav.setBackgroundResource(R.mipmap.f);
                         s.changeFav( m,1);
 
                     }
                     else
-                    {  imgFav.setBackgroundResource(R.drawable.notfavorite);
+                    {  imgFav.setBackgroundResource(R.mipmap.nf);
                         s.changeFav(m, 0);
 
 
@@ -328,6 +296,13 @@ public class Pager_Messages extends AppCompatActivity {
                     }
                 }
             });
+
+
+            AdView mAdView;
+//        MobileAds.initialize(this, App_ID);
+            mAdView = (AdView)rootView. findViewById(R.id.adView_frag);
+            mAdView.loadAd(new AdRequest.Builder().build());
+
 
 
             /////////////////////////

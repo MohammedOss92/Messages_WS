@@ -22,6 +22,8 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.messages.abdallah.mymessages.SqliteClasses.Sqlite;
 import com.messages.abdallah.mymessages.Classes.CustomMsgTypes;
 import com.messages.abdallah.mymessages.adapters.MSgTypesAdapters;
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         lvTitles = (ListView) findViewById(R.id.lvMessageTypes);
 
-
+        AdsView();
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -147,6 +149,13 @@ public class MainActivity extends AppCompatActivity {
         List<CustomMsgTypes> myArrayList=  s.getMsgTypes();
         MSgTypesAdapters a=new MSgTypesAdapters(this,myArrayList);
         lvTitles.setAdapter(a);
+    }
+
+    private void AdsView() {
+        AdView mAdView;
+//        MobileAds.initialize(this, App_ID);
+        mAdView = (AdView) findViewById(R.id.adView_con_main);
+        mAdView.loadAd(new AdRequest.Builder().build());
     }
 
 

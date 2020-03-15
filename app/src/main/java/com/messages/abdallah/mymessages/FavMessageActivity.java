@@ -20,6 +20,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import java.util.List;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.messages.abdallah.mymessages.Classes.Messages;
 import com.messages.abdallah.mymessages.SqliteClasses.Sqlite;
 import com.messages.abdallah.mymessages.adapters.MessagesAdapter;
@@ -36,7 +39,7 @@ public class FavMessageActivity extends AppCompatActivity {
 
 
         lvMessages=(ListView) findViewById(R.id.lvMessages);
-
+        AdsView();
 
 
 //        lvMessages.addHeaderView(new View(this));
@@ -58,7 +61,7 @@ public class FavMessageActivity extends AppCompatActivity {
             {
 
 
-                Intent i = new Intent(FavMessageActivity.this,PagerMessages.class);
+                Intent i = new Intent(FavMessageActivity.this,Pager_Messages.class);
 
                 Messages m=(Messages)parent.getItemAtPosition(position);
 
@@ -68,6 +71,7 @@ public class FavMessageActivity extends AppCompatActivity {
                 i.putExtra("msgID",m.getMsgID());
                 //i.putExtra("origPos",m.getOrigPos());
                 i.putExtra("origPos",m.getOrderFav());
+                i.putExtra("oriPos",m.getOrigPos());
                 i.putExtra("newMsg",m.getNewMsg());
                 i.putExtra("sourceIsFav",true);
                 startActivity(i);
@@ -159,6 +163,13 @@ public class FavMessageActivity extends AppCompatActivity {
         List<Messages> myArrayLis=  s.getFavMessagesOrderedASC();
         MessagesAdapter a=new MessagesAdapter(this,myArrayLis,20);
         lvMessages.setAdapter(a);
+    }
+
+    private void AdsView() {
+        AdView mAdView;
+//        MobileAds.initialize(this, App_ID);
+        mAdView = (AdView) findViewById(R.id.adView_fav);
+        mAdView.loadAd(new AdRequest.Builder().build());
     }
 
 

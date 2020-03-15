@@ -44,9 +44,9 @@
         android:id="@+id/asasasas">
         <ImageView
             android:id="@+id/fav"
-            android:layout_width="30dp"
-            android:layout_height="28dp"
-            android:src="@drawable/notfavorite"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/nff"
             android:layout_gravity="right"/>
 
         <ImageView
