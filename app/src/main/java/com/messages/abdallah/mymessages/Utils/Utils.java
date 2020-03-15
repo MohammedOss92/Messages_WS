@@ -1,4 +1,4 @@
-package Utils;
+package com.messages.abdallah.mymessages.Utils;
 
 import android.content.Context;
 import android.content.Intent;

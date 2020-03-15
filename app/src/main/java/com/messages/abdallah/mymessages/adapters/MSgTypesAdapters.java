@@ -1,4 +1,4 @@
-package adapters;
+package com.messages.abdallah.mymessages.adapters;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.messages.abdallah.mymessages.Classes.CustomMsgTypes;
 import com.messages.abdallah.mymessages.R;
 
 import java.util.List;

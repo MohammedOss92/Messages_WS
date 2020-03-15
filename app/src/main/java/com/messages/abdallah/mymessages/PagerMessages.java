@@ -1,6 +1,5 @@
 package com.messages.abdallah.mymessages;
 
-import java.io.Serializable;
 import java.util.List;
 import java.util.Locale;
 
@@ -10,19 +9,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.os.Message;
-import android.os.Parcelable;
 import android.preference.PreferenceManager;
-import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -30,9 +24,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
@@ -41,10 +33,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import Classes.Messages;
-import SqliteClasses.Sqlite;
-import Utils.Utils;
-import adapters.MessagesAdapter;
+import com.messages.abdallah.mymessages.Classes.Messages;
+import com.messages.abdallah.mymessages.SqliteClasses.Sqlite;
+import com.messages.abdallah.mymessages.Utils.Utils;
 
 public class PagerMessages extends AppCompatActivity {
 

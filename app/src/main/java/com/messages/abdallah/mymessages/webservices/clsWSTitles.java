@@ -1,4 +1,4 @@
-package webservices;
+package com.messages.abdallah.mymessages.webservices;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -29,8 +29,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import SqliteClasses.Sqlite;
-import adapters.CustomMsgTypes;
+import com.messages.abdallah.mymessages.SqliteClasses.Sqlite;
+import com.messages.abdallah.mymessages.Classes.CustomMsgTypes;
 
 /**
  * Created by MUNZ 1985 on 8/8/2015.

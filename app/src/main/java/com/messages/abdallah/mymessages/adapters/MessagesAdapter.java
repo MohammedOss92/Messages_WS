@@ -1,4 +1,4 @@
-package adapters;
+package com.messages.abdallah.mymessages.adapters;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -20,9 +20,9 @@ import com.messages.abdallah.mymessages.R;
 
 import java.util.List;
 
-import Classes.Messages;
-import SqliteClasses.Sqlite;
-import Utils.Utils;
+import com.messages.abdallah.mymessages.Classes.Messages;
+import com.messages.abdallah.mymessages.SqliteClasses.Sqlite;
+import com.messages.abdallah.mymessages.Utils.Utils;
 
 /**
  * Created by MUNZ 1985 on 8/8/2015.
@@ -113,7 +113,7 @@ public class MessagesAdapter extends BaseAdapter {
                             Utils.IntenteShare(c, "مسجاتي", "مسجاتي", holder.tvMsg.getText().toString());
                         }
                     });
-                    //Utils.IntenteShare(c, "مسجاتي", "مسجاتي", holder.tvMsg.getText().toString());
+                    //com.messages.abdallah.mymessages.Utils.IntenteShare(c, "مسجاتي", "مسجاتي", holder.tvMsg.getText().toString());
 
                     popDialog.show();
                 }

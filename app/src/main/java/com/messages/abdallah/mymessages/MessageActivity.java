@@ -1,15 +1,11 @@
 package com.messages.abdallah.mymessages;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
@@ -18,24 +14,20 @@ import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.SeekBar;
-import android.widget.TextView;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
-import Classes.Messages;
-import SqliteClasses.Sqlite;
-import adapters.CustomMsgTypes;
-import adapters.MSgTypesAdapters;
-import adapters.MessagesAdapter;
-import webservices.clsWSMessages;
+import com.messages.abdallah.mymessages.Classes.Messages;
+import com.messages.abdallah.mymessages.SqliteClasses.Sqlite;
+import com.messages.abdallah.mymessages.adapters.MessagesAdapter;
+import com.messages.abdallah.mymessages.webservices.clsWSMessages;
 
 
 public class MessageActivity extends AppCompatActivity {
@@ -43,32 +35,18 @@ public class MessageActivity extends AppCompatActivity {
     ListView lvMessages;
     EditText et;
     LinearLayout ll;
-
+    ArrayList<Messages> myArrayList= new ArrayList<Messages>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aa);
         setTitle(null);
-     }
-
-
-    @Override
-    protected void onResume() {
-        super.onResume();
         ll= (LinearLayout) findViewById(R.id.ll);
 
         //      Toolbar topToolBar = (Toolbar)findViewById(R.id.toolbar);
         //     setSupportActionBar(topToolBar);
 
         lvMessages=(ListView) findViewById(R.id.lvMessages);
-
-
-
-
-
-//        lvMessages.addHeaderView(new View(this));
-//        lvMessages.addFooterView(new View(this));
-
         et=(EditText)findViewById(R.id.editText);
 
         Intent i=getIntent();
@@ -76,10 +54,10 @@ public class MessageActivity extends AppCompatActivity {
         if (i.getExtras()!=null) {
             titleID = i.getExtras().getInt("titleID");
         }
-           else
-            {
-              titleID=1;
-            }
+        else
+        {
+            titleID=1;
+        }
 
         fillData();
         if(lvMessages.getAdapter().getCount()==0) {
@@ -136,12 +114,26 @@ public class MessageActivity extends AppCompatActivity {
                 //Code For SQLITE
 
                 Sqlite ss=new Sqlite(getApplicationContext());
-                List<Messages> myArrayList=  ss.getMessagesFiltered(titleID, et.getText().toString());
-                MessagesAdapter a=new MessagesAdapter(getApplicationContext(),myArrayList,20);
-
-                lvMessages.setAdapter(a);
+                myArrayList=  ss.getMessagesFiltered(titleID, et.getText().toString());
+                Adapter();
             }
         });
+     }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+
+
+
+
+
+//        lvMessages.addHeaderView(new View(this));
+//        lvMessages.addFooterView(new View(this));
+
+
 
     }
 
@@ -176,19 +168,26 @@ public class MessageActivity extends AppCompatActivity {
 
 
     //This code for web service
-    public void fillData(boolean success,List<String> myArrayList)
-    {
-
-        ArrayAdapter<String> a=new ArrayAdapter(this,android.R.layout.simple_list_item_1,myArrayList);
-        lvMessages.setAdapter(a);
-    }
+//    public void fillData(boolean success,List<String> myArrayList)
+//    {
+//
+//        ArrayAdapter<String> a=new ArrayAdapter(this,android.R.layout.simple_list_item_1,myArrayList);
+//        lvMessages.setAdapter(a);
+//    }
 
     //This Code From Sqlite
     public void fillData()
     {
         Sqlite s=new Sqlite(this);
-        List<Messages> myArrayList=  s.getMessages(titleID);
+        myArrayList=  s.getMessages(titleID);
+//        MessagesAdapter a=new MessagesAdapter(this,myArrayList,20);
+//        lvMessages.setAdapter(a);
+        Adapter();
+    }
+
+    public void Adapter(){
         MessagesAdapter a=new MessagesAdapter(this,myArrayList,20);
+
         lvMessages.setAdapter(a);
     }
 

@@ -512,7 +512,7 @@ public class ActivityText extends AppCompatActivity {
 //
 //        //noinspection SimplifiableIfStatement
 ////        if (id == R.id.action_share) {
-////            Utils.IntenteShare(this, "مسجاتي", "مسجاتي", ed.getText().toString());
+////            com.messages.abdallah.mymessages.Utils.IntenteShare(this, "مسجاتي", "مسجاتي", ed.getText().toString());
 ////            return true;
 ////        }
 //

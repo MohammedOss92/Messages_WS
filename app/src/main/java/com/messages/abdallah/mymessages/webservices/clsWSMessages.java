@@ -1,8 +1,7 @@
-package webservices;
+package com.messages.abdallah.mymessages.webservices;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkError;
@@ -29,8 +28,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import Classes.Messages;
-import SqliteClasses.Sqlite;
+import com.messages.abdallah.mymessages.Classes.Messages;
+import com.messages.abdallah.mymessages.SqliteClasses.Sqlite;
 
 //import com.message.abdallah.mymessages.MainActivity;
 //import com.message.abdallah.mymessages.MessageActivity;

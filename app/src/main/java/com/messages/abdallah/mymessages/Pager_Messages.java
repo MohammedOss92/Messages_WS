@@ -34,9 +34,9 @@ import android.widget.Toast;
 import java.util.List;
 import java.util.Locale;
 
-import Classes.Messages;
-import SqliteClasses.Sqlite;
-import Utils.Utils;
+import com.messages.abdallah.mymessages.Classes.Messages;
+import com.messages.abdallah.mymessages.SqliteClasses.Sqlite;
+import com.messages.abdallah.mymessages.Utils.Utils;
 
 public class Pager_Messages extends AppCompatActivity {
 

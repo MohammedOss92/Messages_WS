@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
@@ -21,9 +20,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import java.util.List;
-import Classes.Messages;
-import SqliteClasses.Sqlite;
-import adapters.MessagesAdapter;
+import com.messages.abdallah.mymessages.Classes.Messages;
+import com.messages.abdallah.mymessages.SqliteClasses.Sqlite;
+import com.messages.abdallah.mymessages.adapters.MessagesAdapter;
 
 public class FavMessageActivity extends AppCompatActivity {
     int titleID;

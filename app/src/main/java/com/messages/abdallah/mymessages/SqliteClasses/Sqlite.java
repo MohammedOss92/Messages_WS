@@ -1,15 +1,16 @@
-package SqliteClasses;
+package com.messages.abdallah.mymessages.SqliteClasses;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
-import Classes.Messages;
-import adapters.CustomMsgTypes;
+import com.messages.abdallah.mymessages.Classes.Messages;
+import com.messages.abdallah.mymessages.Classes.CustomMsgTypes;
 
 /**
  * Created by Abdallah on 26/02/2016.
@@ -182,10 +183,10 @@ public class Sqlite extends SQLiteOpenHelper {
     }
 
 
-    public List<Messages> getMessages(int typeID) {
+    public ArrayList<Messages> getMessages(int typeID) {
         Messages u;
 
-        List<Messages> myList = new ArrayList<>();
+        ArrayList<Messages> myList = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = db.rawQuery(" SELECT *   FROM Messages   where TypeID='" + typeID + "' order by msgID desc", null);
 
@@ -373,10 +374,10 @@ public class Sqlite extends SQLiteOpenHelper {
     }
 
 
-    public List<Messages> getMessagesFiltered(int typeID, String filterValue) {
+    public ArrayList<Messages> getMessagesFiltered(int typeID, String filterValue) {
         Messages u;
 
-        List<Messages> myList = new ArrayList<>();
+        ArrayList<Messages> myList = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = db.rawQuery(" SELECT *   FROM Messages   where TypeID='" + typeID + "' and MsgDescription like'%" + filterValue + "%' order by msgID desc", null);
 

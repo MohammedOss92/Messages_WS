@@ -1,18 +1,15 @@
 package com.messages.abdallah.mymessages;
 
 import android.content.Intent;
-import android.nfc.Tag;
 import android.os.Bundle;
 //import android.support.v7.app.AppCompatActivity;
 //import android.support.v7.widget.Toolbar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 //
 //import com.google.android.gms.ads.AdRequest;
 //import com.google.android.gms.ads.AdView;
@@ -25,10 +22,10 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import SqliteClasses.Sqlite;
-import adapters.CustomMsgTypes;
-import adapters.MSgTypesAdapters;
-import webservices.clsWSTitles;
+import com.messages.abdallah.mymessages.SqliteClasses.Sqlite;
+import com.messages.abdallah.mymessages.Classes.CustomMsgTypes;
+import com.messages.abdallah.mymessages.adapters.MSgTypesAdapters;
+import com.messages.abdallah.mymessages.webservices.clsWSTitles;
 
 public class MainActivity extends AppCompatActivity {
     ListView lvTitles;

@@ -1,4 +1,4 @@
-package adapters;
+package com.messages.abdallah.mymessages.Classes;
 
 /**
  * Created by MUNZ 1985 on 8/8/2015.

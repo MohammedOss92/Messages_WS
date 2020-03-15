@@ -1,4 +1,4 @@
-package Classes;
+package com.messages.abdallah.mymessages.Classes;
 
 import android.os.Parcel;
 import android.os.Parcelable;
